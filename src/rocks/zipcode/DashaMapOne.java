@@ -1,5 +1,6 @@
 package rocks.zipcode;
 
+
 public class DashaMapOne implements HashMapX {
 
     class Node {
@@ -12,6 +13,31 @@ public class DashaMapOne implements HashMapX {
             this.value = value;
             this.next = null;
         }
+        public String getKey() {
+            return key;
+        }
+
+        public void setKey(String key) {
+            this.key = key;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
+
+
     }
 
     private Node[] hasharray;
@@ -70,8 +96,15 @@ public class DashaMapOne implements HashMapX {
 
     @Override
     public String delete(String key) {
-        // left as an exercise to the plagarist.
-        return null;
+
+            for (int i = 0; i < hasharray.length; i++) {
+                if (hasharray[i].key.charAt(0) == key.charAt(0)) {
+                    hasharray[i].next = hasharray[i + 1].next;
+                    return key;
+                }
+            }
+
+        return "not deleted";
     }
 
     @Override

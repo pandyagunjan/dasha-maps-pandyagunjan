@@ -32,7 +32,15 @@ public class DashaMapOneTest {
 
     @Test
     public void delete() {
-        Assert.fail("unimplemented test delete()");
+        DashaMapOne dm = new DashaMapOne();
+        dm.set("aaa", "5");
+        dm.set("bbb", "15");
+        dm.set("ccc", "20");
+        String expected = "b";
+        String actual = dm.delete("b");
+        Assert.assertEquals(expected, actual);
+
+       // Assert.fail("unimplemented test delete()");
     }
 
     @Test
@@ -120,6 +128,28 @@ public class DashaMapOneTest {
         Long actual = dm.size();
         Long expected = 124L;
         Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testDelete2(){
+        DashaMapOne dm = new DashaMapOne();
+        dm.set("gunjan","2");
+        dm.set("daksh", "1");
+        dm.set("dhruv", "1");
+        dm.delete("daksh");
+        String expected = null;
+        String actual = dm.get("daksh");
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void testDelete3(){
+        DashaMapOne dm = new DashaMapOne();
+        dm.set("gunjan","2");
+        dm.set("daksh", "1");
+        dm.set("dhruv", "1");
+        dm.delete("gunjan");
+        String expected = null;
+        String actual = dm.get("gunjan");
+        assertEquals(expected,actual);
     }
 
 }
