@@ -1,7 +1,7 @@
 package rocks.zipcode;
 
 
-public class DashaMapTwo implements HashMapX {
+public class DashaMapThree implements HashMapX {
 
     class Node {
         String key;
@@ -42,7 +42,7 @@ public class DashaMapTwo implements HashMapX {
 
     private Node[] hasharray;
 
-    public DashaMapTwo() {
+    public DashaMapThree() {
         this.hasharray = new Node[26];
         int i = 0;
         for (char alphabet = 'a'; alphabet <= 'z'; alphabet++) {
@@ -51,15 +51,21 @@ public class DashaMapTwo implements HashMapX {
         }
     }
 
-    private String HashFunctionTwo(String input) {
+    private String HashFunctionThree(String input) {
+
+        if (input.length() > 2) {
+            return (String.valueOf(input.charAt(2)).toLowerCase());
+        }
+        if (input.length() > 1) {
+            return (String.valueOf(input.charAt(1)).toLowerCase());
+        }
         if (input.length() > 0) {
             return String.valueOf(input.charAt(0)).toLowerCase();
         }
-        if (input.length() > 1) {
-            return String.valueOf(input.charAt(1)).toLowerCase();
-        }
+
+
         return null;
-    }
+        }
 
     private Integer findHead(String kh) {
         int i = 0;
@@ -81,7 +87,7 @@ public class DashaMapTwo implements HashMapX {
     }
 
     private Node findIn(String keyword) {
-        String keyhash =  HashFunctionTwo(keyword);
+        String keyhash =  HashFunctionThree(keyword);
         Integer bucket = findHead(keyhash);
         Node n = hasharray[bucket].next;
         while (n != null && !n.key.equals(keyword)) {
@@ -92,14 +98,14 @@ public class DashaMapTwo implements HashMapX {
 
     @Override
     public void set(String key, String value) {
-        String keyhash =  HashFunctionTwo(key);
+        String keyhash =  HashFunctionThree(key);
         Node newval = new Node(key, value);
         appendTo(keyhash, newval);
     }
 
     @Override
     public String delete(String key) {
-        String keyhash =  HashFunctionTwo(key);
+        String keyhash =  HashFunctionThree(key);
         Integer bucket = findHead(keyhash);
         Node n = hasharray[bucket].next;
         if(n==null)
@@ -126,7 +132,7 @@ public class DashaMapTwo implements HashMapX {
 
     @Override
     public String get(String key) {
-        String keyhash =  HashFunctionTwo(key);
+        String keyhash =  HashFunctionThree(key);
         Node newnode = findIn(key);
         if (newnode != null) {
             return newnode.value;

@@ -23,13 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77332b85-eba8-4052-8cdc-82d0a414d398" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/rocks/zipcode/DashaMapTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/rocks/zipcode/DashaMapTwoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rocks/zipcode/DashaMapThree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/rocks/zipcode/DashaMapThreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rocks/zipcode/DashaMapOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rocks/zipcode/DashaMapOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rocks/zipcode/DashaMapOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rocks/zipcode/DashaMapOne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rocks/zipcode/DashaMapOneTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rocks/zipcode/DashaMapOneTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/rocks/zipcode/DashaMapOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/rocks/zipcode/DashaMapOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rocks/zipcode/DashaMapTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rocks/zipcode/DashaMapTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rocks/zipcode/DashaMapTwoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rocks/zipcode/DashaMapTwoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/rocks/zipcode/DashaMapTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/rocks/zipcode/DashaMapTwoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DashaMapTwoTest">
+  <component name="RunManager" selected="JUnit.rocks.zipcode in DashaMaps">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -97,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DashaMapOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DashaMapThreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DashaMaps" />
       <extension name="coverage">
         <pattern>
@@ -106,42 +105,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="rocks.zipcode" />
-      <option name="MAIN_CLASS_NAME" value="rocks.zipcode.DashaMapOneTest" />
+      <option name="MAIN_CLASS_NAME" value="rocks.zipcode.DashaMapThreeTest" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DashaMapOneTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DashaMaps" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rocks.zipcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rocks.zipcode" />
-      <option name="MAIN_CLASS_NAME" value="rocks.zipcode.DashaMapOneTest" />
-      <option name="METHOD_NAME" value="delete" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DashaMapOneTest.delete2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DashaMaps" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rocks.zipcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rocks.zipcode" />
-      <option name="MAIN_CLASS_NAME" value="rocks.zipcode.DashaMapOneTest" />
-      <option name="METHOD_NAME" value="delete2" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,8 +145,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DashaMapTwoTest.setTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DashaMaps" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rocks.zipcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rocks.zipcode" />
+      <option name="MAIN_CLASS_NAME" value="rocks.zipcode.DashaMapTwoTest" />
+      <option name="METHOD_NAME" value="setTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rocks.zipcode in DashaMaps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DashaMaps" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rocks.zipcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rocks.zipcode" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.rocks.zipcode in DashaMaps" />
+        <item itemvalue="JUnit.DashaMapTwoTest.setTest1" />
         <item itemvalue="JUnit.DashaMapTwoTest" />
+        <item itemvalue="JUnit.DashaMapThreeTest" />
         <item itemvalue="JUnit.DashaMapTwoTest.bucketSize" />
-        <item itemvalue="JUnit.DashaMapOneTest" />
-        <item itemvalue="JUnit.DashaMapOneTest.delete2" />
-        <item itemvalue="JUnit.DashaMapOneTest.delete" />
       </list>
     </recent_temporary>
   </component>
@@ -253,28 +250,28 @@
     </state>
     <state x="2053" y="62" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606091031077" />
     <state x="2053" y="80" key="#com.intellij.ide.util.MemberChooser/0.23.1280.724/1280.-139.1920.1057@1280.-139.1920.1057" timestamp="1606085264592" />
-    <state width="1878" height="226" key="GridCell.Tab.0.bottom" timestamp="1606426783597">
+    <state width="1878" height="393" key="GridCell.Tab.0.bottom" timestamp="1606428639339">
       <screen x="1280" y="-162" width="1920" height="1080" />
     </state>
-    <state width="1878" height="226" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606426783597" />
+    <state width="1878" height="393" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606428639339" />
     <state width="1878" height="224" key="GridCell.Tab.0.bottom/0.23.1280.724/1280.-139.1920.1057@0.23.1280.724" timestamp="1606087673282" />
     <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.23.1280.724/1280.-139.1920.1057@1280.-139.1920.1057" timestamp="1606085075671" />
-    <state width="1878" height="226" key="GridCell.Tab.0.center" timestamp="1606426783594">
+    <state width="1878" height="393" key="GridCell.Tab.0.center" timestamp="1606428639336">
       <screen x="1280" y="-162" width="1920" height="1080" />
     </state>
-    <state width="1878" height="226" key="GridCell.Tab.0.center/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606426783594" />
+    <state width="1878" height="393" key="GridCell.Tab.0.center/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606428639336" />
     <state width="1878" height="224" key="GridCell.Tab.0.center/0.23.1280.724/1280.-139.1920.1057@0.23.1280.724" timestamp="1606087673275" />
     <state width="1878" height="375" key="GridCell.Tab.0.center/0.23.1280.724/1280.-139.1920.1057@1280.-139.1920.1057" timestamp="1606085075665" />
-    <state width="1878" height="226" key="GridCell.Tab.0.left" timestamp="1606426783592">
+    <state width="1878" height="393" key="GridCell.Tab.0.left" timestamp="1606428639333">
       <screen x="1280" y="-162" width="1920" height="1080" />
     </state>
-    <state width="1878" height="226" key="GridCell.Tab.0.left/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606426783592" />
+    <state width="1878" height="393" key="GridCell.Tab.0.left/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606428639333" />
     <state width="1878" height="224" key="GridCell.Tab.0.left/0.23.1280.724/1280.-139.1920.1057@0.23.1280.724" timestamp="1606087673270" />
     <state width="1878" height="375" key="GridCell.Tab.0.left/0.23.1280.724/1280.-139.1920.1057@1280.-139.1920.1057" timestamp="1606085075662" />
-    <state width="1878" height="226" key="GridCell.Tab.0.right" timestamp="1606426783595">
+    <state width="1878" height="393" key="GridCell.Tab.0.right" timestamp="1606428639338">
       <screen x="1280" y="-162" width="1920" height="1080" />
     </state>
-    <state width="1878" height="226" key="GridCell.Tab.0.right/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606426783595" />
+    <state width="1878" height="393" key="GridCell.Tab.0.right/0.0.1280.800/1280.-162.1920.1080@1280.-162.1920.1080" timestamp="1606428639338" />
     <state width="1878" height="224" key="GridCell.Tab.0.right/0.23.1280.724/1280.-139.1920.1057@0.23.1280.724" timestamp="1606087673279" />
     <state width="1878" height="375" key="GridCell.Tab.0.right/0.23.1280.724/1280.-139.1920.1057@1280.-139.1920.1057" timestamp="1606085075668" />
     <state width="1878" height="320" key="GridCell.Tab.1.bottom" timestamp="1606425518433">

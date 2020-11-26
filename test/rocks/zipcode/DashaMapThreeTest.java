@@ -9,11 +9,11 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
-public class DashaMapTwoTest {
+public class DashaMapThreeTest {
 
     @Test
     public void set() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         dm.set("aaa", "5");
         Integer expected = 1;
@@ -23,7 +23,7 @@ public class DashaMapTwoTest {
 
     @Test
     public void set2() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         Integer expected = 0;
         Integer actual = dm.bucketSize("a");
@@ -32,7 +32,7 @@ public class DashaMapTwoTest {
 
     @Test
     public void delete() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
         dm.set("aaa", "5");
         dm.set("bbb", "15");
         dm.set("ccc", "20");
@@ -45,7 +45,7 @@ public class DashaMapTwoTest {
 
     @Test
     public void delete1() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
         dm.set("aaa", "5");
         dm.set("bbb", "15");
         dm.set("ccc", "20");
@@ -55,19 +55,19 @@ public class DashaMapTwoTest {
     }
     @Test
     public void delete2() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
         dm.set("aaa", "5");
         dm.set("bbb", "15");
         dm.set("ccc", "20");
         dm.set("ddd", "25");
         dm.set("dad", "25");
-        String expected = "not found , not deleted";
+        String expected = "item not found";
         String actual = dm.delete("def");
         Assert.assertEquals(expected, actual);
     }
     @Test
     public void get() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         dm.set("aaa", "5");
         String expected = "5";
@@ -76,7 +76,7 @@ public class DashaMapTwoTest {
     }
     @Test
     public void get2() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         dm.set("aaa", "5");
         dm.set("aba", "3");
@@ -88,7 +88,7 @@ public class DashaMapTwoTest {
 
     @Test
     public void isEmpty() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         Boolean expected = false;
 
@@ -100,7 +100,7 @@ public class DashaMapTwoTest {
 
     @Test
     public void isEmpty2() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         Boolean expected = true;
         Boolean actual = dm.isEmpty();
@@ -109,7 +109,7 @@ public class DashaMapTwoTest {
 
     @Test
     public void size() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         dm.set("aaa", "5");
         dm.set("ab", "5");
@@ -120,18 +120,18 @@ public class DashaMapTwoTest {
 
     @Test
     public void bucketSize() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         dm.set("aaa", "5");
         dm.set("ab", "5");
-        Integer expected = 2;
+        Integer expected = 1;
         Integer actual = dm.bucketSize("a");
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testReadList() {
-        DashaMapTwo dm = new DashaMapTwo();
+        DashaMapThree dm = new DashaMapThree();
 
         BufferedReader reader;
         try {
@@ -151,22 +151,5 @@ public class DashaMapTwoTest {
         Long expected = 124L;
         Assert.assertEquals(expected, actual);
     }
-    @Test
-    public void setTest1(){
-        DashaMapTwo dm = new DashaMapTwo();
-        String expectedKey = "Help";
-        String expectedValue = "1";
-        String expectedKey1 = "Hello";
-        String expectedValue1 = "2";
-        String expectedKey2 = "Helicopter";
-        String expectedValue2 = "3";
-        String expectedKey3 = "Come";
-        String expectedValue3 = "4";
 
-        dm.set(expectedKey, expectedValue);
-        dm.set(expectedKey1, expectedValue1);
-        dm.set(expectedKey2, expectedValue2);
-        dm.set(expectedKey3, expectedValue3);
-        Assert.assertEquals(expectedValue3, dm.get(expectedKey3));
-    }
 }
