@@ -1,7 +1,7 @@
 package rocks.zipcode;
 
 
-public class DashaMapOne implements HashMapX {
+public class DashaMapTwo implements HashMapX {
 
     class Node {
         String key;
@@ -42,7 +42,7 @@ public class DashaMapOne implements HashMapX {
 
     private Node[] hasharray;
 
-    public DashaMapOne() {
+    public DashaMapTwo() {
         this.hasharray = new Node[26];
         int i = 0;
         for (char alphabet = 'a'; alphabet <= 'z'; alphabet++) {
@@ -54,6 +54,9 @@ public class DashaMapOne implements HashMapX {
     private String HashFunctionOne(String input) {
         if (input.length() > 0) {
             return String.valueOf(input.charAt(0)).toLowerCase();
+        }
+        if (input.length() > 1) {
+            return String.valueOf(input.charAt(1)).toLowerCase();
         }
         return null;
     }
@@ -104,7 +107,7 @@ public class DashaMapOne implements HashMapX {
             return "item not found";
         }
 
-         while (n != null){
+        while (n != null){
             Node temp =n;
             if(!n.key.equals(key))
             {
@@ -114,9 +117,9 @@ public class DashaMapOne implements HashMapX {
             {
                 temp.next=n.next;
                 n=temp;
-                 return n.getKey();
+                return n.getKey();
             }
-         }
+        }
 
         return "not found , not deleted";
     }

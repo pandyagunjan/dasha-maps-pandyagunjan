@@ -9,11 +9,11 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
-public class DashaMapOneTest {
+public class DashaMapTwoTest {
 
     @Test
     public void set() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         dm.set("aaa", "5");
         Integer expected = 1;
@@ -23,7 +23,7 @@ public class DashaMapOneTest {
 
     @Test
     public void set2() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         Integer expected = 0;
         Integer actual = dm.bucketSize("a");
@@ -32,7 +32,7 @@ public class DashaMapOneTest {
 
     @Test
     public void delete() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
         dm.set("aaa", "5");
         dm.set("bbb", "15");
         dm.set("ccc", "20");
@@ -40,12 +40,12 @@ public class DashaMapOneTest {
         String actual = dm.delete("bbb");
         Assert.assertEquals(expected, actual);
 
-       // Assert.fail("unimplemented test delete()");
+        // Assert.fail("unimplemented test delete()");
     }
 
     @Test
     public void delete1() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
         dm.set("aaa", "5");
         dm.set("bbb", "15");
         dm.set("ccc", "20");
@@ -55,7 +55,7 @@ public class DashaMapOneTest {
     }
     @Test
     public void delete2() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
         dm.set("aaa", "5");
         dm.set("bbb", "15");
         dm.set("ccc", "20");
@@ -67,7 +67,7 @@ public class DashaMapOneTest {
     }
     @Test
     public void get() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         dm.set("aaa", "5");
         String expected = "5";
@@ -76,7 +76,7 @@ public class DashaMapOneTest {
     }
     @Test
     public void get2() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         dm.set("aaa", "5");
         dm.set("aba", "3");
@@ -88,7 +88,7 @@ public class DashaMapOneTest {
 
     @Test
     public void isEmpty() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         Boolean expected = false;
 
@@ -100,7 +100,7 @@ public class DashaMapOneTest {
 
     @Test
     public void isEmpty2() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         Boolean expected = true;
         Boolean actual = dm.isEmpty();
@@ -109,7 +109,7 @@ public class DashaMapOneTest {
 
     @Test
     public void size() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         dm.set("aaa", "5");
         dm.set("ab", "5");
@@ -120,7 +120,7 @@ public class DashaMapOneTest {
 
     @Test
     public void bucketSize() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         dm.set("aaa", "5");
         dm.set("ab", "5");
@@ -131,7 +131,7 @@ public class DashaMapOneTest {
 
     @Test
     public void testReadList() {
-        DashaMapOne dm = new DashaMapOne();
+        DashaMapTwo dm = new DashaMapTwo();
 
         BufferedReader reader;
         try {
