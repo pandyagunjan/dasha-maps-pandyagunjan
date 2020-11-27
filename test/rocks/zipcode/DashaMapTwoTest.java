@@ -53,18 +53,7 @@ public class DashaMapTwoTest {
         String actual = dm.delete("ddd");
         Assert.assertEquals(expected, actual);
     }
-    @Test
-    public void delete2() {
-        DashaMapTwo dm = new DashaMapTwo();
-        dm.set("aaa", "5");
-        dm.set("bbb", "15");
-        dm.set("ccc", "20");
-        dm.set("ddd", "25");
-        dm.set("dad", "25");
-        String expected = "not found , not deleted";
-        String actual = dm.delete("def");
-        Assert.assertEquals(expected, actual);
-    }
+
     @Test
     public void get() {
         DashaMapTwo dm = new DashaMapTwo();
@@ -123,10 +112,14 @@ public class DashaMapTwoTest {
         DashaMapTwo dm = new DashaMapTwo();
 
         dm.set("aaa", "5");
-        dm.set("ab", "5");
+        dm.set("aab", "15");
+        dm.set("aba", "25");
+        dm.set("abb","10");
         Integer expected = 2;
         Integer actual = dm.bucketSize("a");
+        Integer actualForb = dm.bucketSize("b");
         Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actualForb);
     }
 
     @Test
@@ -151,22 +144,5 @@ public class DashaMapTwoTest {
         Long expected = 124L;
         Assert.assertEquals(expected, actual);
     }
-    @Test
-    public void setTest1(){
-        DashaMapTwo dm = new DashaMapTwo();
-        String expectedKey = "Help";
-        String expectedValue = "1";
-        String expectedKey1 = "Hello";
-        String expectedValue1 = "2";
-        String expectedKey2 = "Helicopter";
-        String expectedValue2 = "3";
-        String expectedKey3 = "Come";
-        String expectedValue3 = "4";
 
-        dm.set(expectedKey, expectedValue);
-        dm.set(expectedKey1, expectedValue1);
-        dm.set(expectedKey2, expectedValue2);
-        dm.set(expectedKey3, expectedValue3);
-        Assert.assertEquals(expectedValue3, dm.get(expectedKey3));
-    }
 }

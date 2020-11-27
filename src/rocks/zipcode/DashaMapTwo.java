@@ -53,12 +53,13 @@ public class DashaMapTwo implements HashMapX {
 
     private String HashFunctionTwo(String input) {
         if (input.length() > 0) {
-            return String.valueOf(input.charAt(0)).toLowerCase();
-        }
-        if (input.length() > 1) {
-            return String.valueOf(input.charAt(1)).toLowerCase();
+            if (input.length() == 1){
+                return (String.valueOf(input.charAt(0)).toLowerCase());
+            }
+            return (String.valueOf(input.charAt(1)).toLowerCase());
         }
         return null;
+
     }
 
     private Integer findHead(String kh) {
