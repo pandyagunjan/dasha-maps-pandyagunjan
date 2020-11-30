@@ -7,7 +7,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static org.junit.Assert.*;
 
 public class DashaMapTwoTest {
 
@@ -115,7 +114,7 @@ public class DashaMapTwoTest {
         dm.set("aab", "15");
         dm.set("aba", "25");
         dm.set("abb","10");
-        Integer expected = 2;
+        Integer expected = 1;
         Integer actual = dm.bucketSize("a");
         Integer actualForb = dm.bucketSize("b");
         Assert.assertEquals(expected, actual);

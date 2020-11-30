@@ -12,23 +12,16 @@ import static org.junit.Assert.*;
 public class DashaMapThreeTest {
 
     @Test
-    public void set() {
-        DashaMapThree dm = new DashaMapThree();
+    public void setTest(){
+        DashaMapThree mapp = new DashaMapThree();
+        mapp.set("AA", "10");
+        mapp.set("ZZ", "1");
+        String expected = mapp.get("AA");
+        String actual = "10";
 
-        dm.set("aaa", "5");
-        Integer expected = 1;
-        Integer actual = dm.bucketSize("a");
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void set2() {
-        DashaMapThree dm = new DashaMapThree();
-
-        Integer expected = 0;
-        Integer actual = dm.bucketSize("a");
-        Assert.assertEquals(expected, actual);
-    }
 
     @Test
     public void delete() {
@@ -99,15 +92,6 @@ public class DashaMapThreeTest {
     }
 
     @Test
-    public void isEmpty2() {
-        DashaMapThree dm = new DashaMapThree();
-
-        Boolean expected = true;
-        Boolean actual = dm.isEmpty();
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
     public void size() {
         DashaMapThree dm = new DashaMapThree();
 
@@ -117,39 +101,31 @@ public class DashaMapThreeTest {
         Long actual = dm.size();
         Assert.assertEquals(expected, actual);
     }
-
     @Test
     public void bucketSize() {
         DashaMapThree dm = new DashaMapThree();
 
         dm.set("aaa", "5");
-        dm.set("ab", "5");
-        Integer expected = 1;
-        Integer actual = dm.bucketSize("a");
+        dm.set("aba", "15");
+        dm.set("acd", "25");
+        dm.set("aag","10");
+        Integer expected = 2;
+        Integer actual = dm.bucketSize("aa");
+      //  Integer actualForb = dm.bucketSize("b");
         Assert.assertEquals(expected, actual);
+       // Assert.assertEquals(expected, actualForb);
     }
-
     @Test
-    public void testReadList() {
+    public void bucketSize1() {
         DashaMapThree dm = new DashaMapThree();
 
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(
-                    "word-list.txt"));
-            String line = reader.readLine();
-            while (line != null) {
-                String[] words = line.split(" ",2);
-                dm.set(words[0], words[1]);
-                line = reader.readLine();
-            }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Long actual = dm.size();
-        Long expected = 124L;
+        dm.set("aaa", "5");
+        dm.set("bbb", "5");
+        Integer expected = 1;
+        Integer actual = dm.bucketSize("aa");
         Assert.assertEquals(expected, actual);
     }
+
+
 
 }

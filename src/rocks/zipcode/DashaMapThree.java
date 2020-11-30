@@ -43,29 +43,27 @@ public class DashaMapThree implements HashMapX {
     private Node[] hasharray;
 
     public DashaMapThree() {
-        this.hasharray = new Node[26];
+        this.hasharray = new Node[26*26];
         int i = 0;
-        for (char alphabet = 'a'; alphabet <= 'z'; alphabet++) {
-            hasharray[i] = new Node(String.valueOf(alphabet), "-1");
-            i++;
+        StringBuilder newHash= new StringBuilder();
+        for (char alphabet = 'a'; alphabet <= 'z';alphabet++) {
+            for (char alphabet2 = 'a'; alphabet2 <= 'z';alphabet2++ ) {
+                newHash.setLength(0);
+                newHash.append(alphabet).append(alphabet2);
+                hasharray[i] = new Node(newHash.toString(), "-1");
+                i++;
+            }
         }
     }
 
     private String HashFunctionThree(String input) {
-
-        if (input.length() > 2) {
-            return (String.valueOf(input.charAt(2)).toLowerCase());
-        }
         if (input.length() > 1) {
-            return (String.valueOf(input.charAt(1)).toLowerCase());
+            return input.substring(0,2).toLowerCase();
         }
-        if (input.length() > 0) {
-            return String.valueOf(input.charAt(0)).toLowerCase();
-        }
-
-
         return null;
+
         }
+
 
     private Integer findHead(String kh) {
         int i = 0;
